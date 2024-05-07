@@ -1,52 +1,49 @@
-var Minute = 0;
-var Second = 0;
-var Milisecond = 0;
+var msht = document.getElementById('ms') 
+var scht = document.getElementById('sec') 
+var mnht = document.getElementById('min') 
+var startbtn = document.getElementById('startbtn')
 
-var minuteHTML = document.getElementById('Min')
-var secondHTML = document.getElementById('Sec')
-var milisecondHTML = document.getElementById('Msec')
-Startbtn = document.getElementById('Startbtn')
+var milisecond = 0
+var second = 0
+var minute = 0
 
-var StopWatch
 
-function Start() {
-    StopWatch = setInterval(function () {
-        Milisecond++
-        if (Milisecond >=99) {
-            Second++
-            Milisecond = 0;
+var watchInterval
+
+function Start(){
+ watchInterval = setInterval(function(){
+        milisecond++
+        if (milisecond >=99) {
+            second++
+            milisecond = 0
+            if (second>=59) {
+                minute++
+                second = 0
+            }
+            
+        }
+        msht.innerText = milisecond
+        scht.innerText = second < 10 ? "0" + second : second
+        mnht.innerText = minute < 10? "0" + minute:minute
+        startbtn.disabled = true
         
-        if (Second >=59) {
-            Minute++
-            Second = 0;
-        }
-           
-        }
-
-  milisecondHTML.innerText = Milisecond
-  secondHTML.innerText = Second < 10? "0" + Second: Second
-  minuteHTML.innerText = Minute < 10? "0" + Minute: Minute
-  Startbtn.disabled = true
-
 
     },10)
+}
+function Stop(){
+    clearTimeout(watchInterval)
+    startbtn.disabled = false
+
+}
+function Reset(){
+    clearTimeout(watchInterval)
+    milisecond = 0
+    second = 0
+    minute = 0
+    msht.innerText = 0
+    scht.innerText = 0
+    mnht.innerText = 0
+    startbtn.disabled = false
     
 }
 
-function Stop() {
-    clearTimeout(StopWatch)
-    Startbtn.disabled = false
-
-}
-
-function Reset() {
-    clearTimeout(StopWatch)
-    milisecondHTML.innerText = 0;
-secondHTML.innerText = 0;
-minuteHTML.innerText = 0;
-Milisecond = 0;
-Second = 0;
-Minute = 0;
-Startbtn.disabled = false
-
-}
