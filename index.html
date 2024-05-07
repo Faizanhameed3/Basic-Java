@@ -6,6 +6,21 @@
     <title>Document</title>
 </head>
 <body>
+<h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Stop Watch</h1>
+<div style="display: flex; justify-content: center;">
+    <h3 id="Min" style="font-size: 95px; ">0</h3>
+    <h3 style="font-size: 90px; ">:</h3>
+    <h3 id="Sec" style="font-size: 95px;">0</h3>
+    <h3 style="font-size: 90px; ">:</h3>
+    <h3 id="Msec" style="font-size: 95px;">00</h3>
+</div>
+<div style="display: flex; justify-content: center;">
+    <button id="Startbtn" onclick="Start()" style="font-size: 85px; margin: 15px;  ">Start</button>
+    <button onclick="Stop()" style="font-size: 85px; margin: 15px;">Stop</button>
+    <button onclick="Reset()" style="font-size: 85px; margin: 15px;">Reset</button>
+
+</div>
+    
     <script src="app.js"></script>
 </body>
 </html>
