@@ -3,30 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Stopwatch</title>
 </head>
 <body>
-    <h1 style=" font-family:Verdana, Geneva, Tahoma, sans-serif; color:#212F3D ;">Stop Watch</h1>
-    <div style="display: flex; justify-content: center; font-size: 35px;">
-  <h1 id="min">0</h1>
-  <h1>:</h1>
-  <h1 id="sec">00</h1>
-  <h1>:</h1>
-  <h1 id="ms">00</h1>
-  
-    </div>
-    <div style=" display: flex; justify-content: center;">
-       <button style="background-color:#08E30C ; font-size: 35px;" id="startbtn" onclick="Start()">Start</button>
-       <button style="background-color:#B2BABB ;font-size: 35px;" onclick="Stop()">Stop</button>
-       <button style="background-color: #FF3349;font-size: 35px;" onclick="Reset()">Reset</button>
-    </div>
-    
+
+<div id="DateTime" style="display: flex; justify-content: center;">
+    <h1 id="hr" style="border: 7px solid; border-radius: 200px; padding: 50px; font-size: 100px; font-family: Verdana, Geneva, Tahoma, sans-serif; border-color: green; ">0</h1>
+    <h1 style=" border-radius: 79px; padding: 35px 10px 0px 10px; font-size: 100px; ">:</h1>
+    <h1 id="min" style="border: 7px solid; border-radius: 200px; padding: 50px; font-size: 100px; font-family: Verdana, Geneva, Tahoma, sans-serif; border-color: blue;">0</h1>
+    <h1 style=" border-radius: 79px; padding: 35px 10px 0px 10px; font-size: 100px; ">:</h1>
+    <h1 id="sec" style="border: 7px solid; border-radius: 200px; padding: 50px; font-size: 100px; font-family: Verdana, Geneva, Tahoma, sans-serif; border-color: chartreuse;">00</h1>
+</div>
+
+
 
 
 
     <script src="app.js"></script>
-    
-
-   
 </body>
 </html>
